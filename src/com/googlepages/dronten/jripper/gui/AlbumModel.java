@@ -68,7 +68,7 @@ public class AlbumModel extends AbstractTableModel {
      *
      * @return Number of tracks
      */
-    @Override public int getRowCount() {
+    public int getRowCount() {
         if (aAlbum != null) {
             return aAlbum.aTracks.size();
         }
@@ -94,7 +94,7 @@ public class AlbumModel extends AbstractTableModel {
      *
      * @return Columns
      */
-    @Override public int getColumnCount() {
+    public int getColumnCount() {
         return 5;
     }
 
@@ -104,7 +104,7 @@ public class AlbumModel extends AbstractTableModel {
      * @param col
      * @return Object to paint
      */
-    @Override public Object getValueAt(int row, int col) {
+    public Object getValueAt(int row, int col) {
         Track track;
 
         try {

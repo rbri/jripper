@@ -59,7 +59,7 @@ public class General extends BaseSetupPanel implements ActionListener {
      *
      * @param actionEvent
      */
-    @Override public void actionPerformed(ActionEvent actionEvent) {
+    public void actionPerformed(ActionEvent actionEvent) {
         if (actionEvent.getSource() == aBrowseMusicDir) {
             JFileChooser chooser = new JFileChooser();
 

@@ -78,7 +78,7 @@ public class ListDialog extends BaseDialog implements ActionListener {
     /**
      * @param actionEvent
      */
-    @Override public void actionPerformed(ActionEvent actionEvent) {
+    public void actionPerformed(ActionEvent actionEvent) {
         setVisible(false);
         aSelect = actionEvent.getSource() == aOK;
     }

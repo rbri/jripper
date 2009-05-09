@@ -63,7 +63,7 @@ public class CDReader extends BaseSetupPanel implements ActionListener {
      *
      * @param actionEvent
      */
-    @Override public void actionPerformed(ActionEvent actionEvent) {
+    public void actionPerformed(ActionEvent actionEvent) {
         if (actionEvent.getSource() == aScanbus) {
             ScanbusTask task = new ScanbusTask();
             task.doTask();
