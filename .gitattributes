@@ -1,4 +1,7 @@
 * text=auto !eol
+/.classpath -text
+/.project -text
+.settings/org.eclipse.jdt.core.prefs -text
 src/com/googlepages/dronten/jripper/Command.java -text
 src/com/googlepages/dronten/jripper/Constants.java -text
 src/com/googlepages/dronten/jripper/ErrorParserThread.java -text
