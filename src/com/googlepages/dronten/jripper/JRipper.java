@@ -38,6 +38,8 @@ public class JRipper extends JFrame {
     public JRipper() {
         super(Constants.APP_NAME);
         JRIPPER = this;
+
+        setTitle(Constants.APP_NAME + " " + Constants.APP_VERSION);
         Log.get().setLogLevel(Constants.LOG_LEVEL);
         new Pref(Constants.APP_NAME);
         aMainWindow = new MainWindow();
