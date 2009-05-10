@@ -70,3 +70,6 @@ src/com/googlepages/dronten/jripper/util/StopWatch.java -text
 src/com/googlepages/dronten/jripper/util/StreamParserThread.java -text
 src/com/googlepages/dronten/jripper/util/StreamThread.java -text
 src/com/googlepages/dronten/jripper/util/ThreadCollector.java -text
+test/com/googlepages/dronten/jripper/AllTests.java -text
+test/com/googlepages/dronten/jripper/cdda2wav/AllTests.java -text
+test/com/googlepages/dronten/jripper/cdda2wav/ScanbusParserStdinThreadTest.java -text
