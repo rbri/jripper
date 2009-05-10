@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
  * Parse the content info from the cdda2aw program and set album information.
  */
 public class ScanbusParserStdinThread extends StreamThread {
-    private static final Pattern    DEVICE = Pattern.compile("\\s*(\\d,\\d,\\d)\\s+\\d\\d\\d\\)\\s(.*)([rR][oO][mM])(.*)");
+    private static final Pattern    DEVICE = Pattern.compile("\\s*(\\d,\\d,\\d)\\s+\\d?\\d?\\d\\)\\s(.*)([rR][oO][mM])(.*)");
     private Vector<String>          aDevices = new Vector<String>();
 
 
