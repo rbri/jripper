@@ -16,7 +16,7 @@ public class Constants {
     public static final String          APP_COPYRIGHT                   = "Copyright 2004-2009 by dronten@gmail.com";
     public static final String          APP_HOMEPAGE                    = "http://dronten.googlepages.com/jripper";
     public static final String          APP_LICENSE                     = "This program is distributed under the terms of the GPL v3.";
-    public static final String          APP_VERSION                     = "1.0";
+    public static final String          APP_VERSION                     = "1.0.1";
     public static final String          APP_VERSION_FREEDB              = "jRipper+1.0";
     public static final String          CODEPAGE                        = "codepage";
 
