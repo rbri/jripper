@@ -76,4 +76,24 @@ public class ScanbusParserStdinThreadTest  extends TestCase {
     	assertEquals("0,0,0 - '_NEC    ' 'DVD_RW ND-3540A ' '1.01' Removable CD-ROM", tmpDevices.get(1));
     	assertEquals("1,0,0 - 'COMPAQ  ' 'CD-ROM CRD-8484B' '1.04' Removable CD-ROM", tmpDevices.get(2));
     }
+
+
+    public void testParseOS2() throws Exception {
+    	ScanbusParserStdinThread tmpParser = new ScanbusParserStdinThread(new Log(0), new Progress());
+
+    	tmpParser.data("scsibus0:");
+    	tmpParser.data("\t0,0,0\t  0) '_NEC    ' 'DVD_RW ND-3540A ' '1.01' Removable CD-ROM");
+		tmpParser.data("\t0,1,0\t  1) *");    	
+		tmpParser.data("\t0,2,0\t  2) *");    	
+		tmpParser.data("\t0,3,0\t  3) *");    	
+		tmpParser.data("\t0,4,0\t  4) *");    	
+		tmpParser.data("\t0,5,0\t  5) *");    	
+		tmpParser.data("\t0,6,0\t  6) *");    	
+		tmpParser.data("\t0,7,0\t  7) *");    	
+    	Vector<String> tmpDevices = tmpParser.getDevices();
+        
+    	assertEquals(2, tmpDevices.size());
+    	assertEquals("--- Probed Devices ---", tmpDevices.get(0));
+    	assertEquals("0,0,0 - '_NEC    ' 'DVD_RW ND-3540A ' '1.01' Removable CD-ROM", tmpDevices.get(1));
+    }
 }
