@@ -22,6 +22,7 @@ public class AllTests {
         TestSuite suite = new TestSuite("All cdda2wav tests");
 
         suite.addTest(ScanbusParserStdinThreadTest.suite());
+        suite.addTest(ScanbusParserStderrThreadTest.suite());
 
         return suite;
     }
