@@ -76,3 +76,5 @@ test/com/googlepages/dronten/jripper/AllTests.java -text
 test/com/googlepages/dronten/jripper/cdda2wav/AllTests.java -text
 test/com/googlepages/dronten/jripper/cdda2wav/ScanbusParserStderrThreadTest.java -text
 test/com/googlepages/dronten/jripper/cdda2wav/ScanbusParserStdinThreadTest.java -text
+test/com/googlepages/dronten/jripper/util/AllTests.java -text
+test/com/googlepages/dronten/jripper/util/StringUtilTest.java -text

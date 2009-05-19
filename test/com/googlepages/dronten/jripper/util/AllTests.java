@@ -4,7 +4,7 @@
 // All rights reserved.
 //
 
-package com.googlepages.dronten.jripper;
+package com.googlepages.dronten.jripper.util;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
@@ -19,10 +19,9 @@ public class AllTests {
 
     public static Test suite() {
 
-        TestSuite suite = new TestSuite("All jRipper tests");
+        TestSuite suite = new TestSuite("All cdda2wav tests");
 
-        suite.addTest(com.googlepages.dronten.jripper.cdda2wav.AllTests.suite());
-        suite.addTest(com.googlepages.dronten.jripper.util.AllTests.suite());
+        suite.addTest(StringUtilTest.suite());
 
         return suite;
     }
