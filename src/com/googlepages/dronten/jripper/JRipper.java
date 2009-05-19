@@ -39,7 +39,7 @@ public class JRipper extends JFrame {
         super(Constants.APP_NAME);
         JRIPPER = this;
 
-        setTitle(Constants.APP_NAME + " " + Constants.APP_VERSION);
+        setTitle(null);
         Log.get().setLogLevel(Constants.LOG_LEVEL);
         new Pref(Constants.APP_NAME);
         aMainWindow = new MainWindow();
@@ -202,12 +202,14 @@ public class JRipper extends JFrame {
      * @param additionalText Extra text after app name
      */
     public void setTitle(String additionalText) {
-        if (additionalText != null) {
-            super.setTitle(Constants.APP_NAME + additionalText);
+    	StringBuilder tmpTitle = new StringBuilder(Constants.APP_NAME);
+    	tmpTitle.append(" ");
+    	tmpTitle.append(Constants.APP_VERSION); 
+    	if (additionalText != null) {
+        	tmpTitle.append(" ");
+        	tmpTitle.append(additionalText); 
         }
-        else {
-            super.setTitle(Constants.APP_NAME);
-        }
+    	super.setTitle(tmpTitle.toString());
     }
 
 
