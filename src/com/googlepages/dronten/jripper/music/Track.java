@@ -9,6 +9,7 @@ package com.googlepages.dronten.jripper.music;
 
 import com.googlepages.dronten.jripper.Constants;
 import com.googlepages.dronten.jripper.util.Pref;
+import com.googlepages.dronten.jripper.util.StringUtil;
 
 import java.io.File;
 
@@ -307,7 +308,10 @@ public class Track {
         albumName = albumName.replaceAll("\"", "");
         albumName = albumName.replaceAll("\\.", "");
         albumName = albumName.trim();
+        albumName = StringUtil.convertNonAscii(albumName);
+        
         fileName = fileName.trim();
+        fileName = StringUtil.convertNonAscii(fileName);
 
         fileName = baseDir + albumName + fileName;
         fileName += extension;
