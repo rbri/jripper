@@ -25,7 +25,7 @@ public class StringUtilTest  extends TestCase {
     }
 
     public void test() {
-    	String tmpInput = "È,É,Ê,Ë,Û,Ù,Ï,Î,À,Â,Ô,è,é,ê,ë,û,ù,ï,î,à,â,ô,ç";
-    	assertEquals("E,E,E,E,U,U,I,I,A,A,O,e,e,e,e,u,u,i,i,a,a,o,c", StringUtil.convertNonAscii(tmpInput));
+    	String tmpInput = "È,É,Ê,Ë,Û,Ù,Ï,Î,À,Â,Ä,Ô,Ö,è,é,ê,ë,û,ù,ü,ï,î,à,â,ô,ç";
+    	assertEquals("E,E,E,E,U,U,I,I,A,A,Ae,O,Oe,e,e,e,e,u,u,ue,i,i,a,a,o,c", StringUtil.convertNonAscii(tmpInput));
     }
 }

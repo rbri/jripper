@@ -14,15 +14,16 @@ package com.googlepages.dronten.jripper.util;
  */
 public class StringUtil {
 	
-	private static final String PLAIN_ASCII = 
-		      "AaEeIiOoUu" // grave
-			+ "AaEeIiOoUuYy" // acute
-			+ "AaEeIiOoUuYy" // circumflex
-			+ "AaOoNn" // tilde
-			+ "AaEeIiOoUuYy" // umlaut
-			+ "Aa" // ring
-			+ "Cc" // cedilla
-			+ "OoUu" // double acute
+	private static final String[] PLAIN_ASCII = new String[] {
+		    "A", "a", "E", "e", "I", "i", "O", "o", "U", "u", // grave
+			"A", "a", "E", "e", "I", "i", "O", "o", "U", "u", "Y", "y", // acute
+			"A", "a", "E", "e", "I", "i", "O", "o", "U", "u", "Y", "y", // circumflex
+			"A", "a", "O", "o", "N", "n", // tilde
+			"Ae", "ae", "E", "e", "I", "i", "Oe", "oe", "Ue", "ue", "Y", "y", // umlaut
+			"A", "a", // ring
+			"C", "c", // cedilla
+			"O", "o", "U", "u" // double acute
+		}
 	;
 
 	private static final String UNICODE = 
@@ -41,12 +42,12 @@ public class StringUtil {
 		StringBuilder tmpResult = new StringBuilder();
 		int n = tmpString.length();
 		for (int i = 0; i < n; i++) {
-			char c = tmpString.charAt(i);
-			int pos = UNICODE.indexOf(c);
+			char tmpChar = tmpString.charAt(i);
+			int pos = UNICODE.indexOf(tmpChar);
 			if (pos > -1) {
-				tmpResult.append(PLAIN_ASCII.charAt(pos));
+				tmpResult.append(PLAIN_ASCII[pos]);
 			} else {
-				tmpResult.append(c);
+				tmpResult.append(tmpChar);
 			}
 		}
 		return tmpResult.toString();
