@@ -1,5 +1,8 @@
 Version 1.0.1 (2009-05-10)
 ==========================
-* Changed: title includes version number 
-* Fixed:   wrong naming for two setup pages
-* Fixed:   parsing for available cd drives was a bit to stupid
+Changed 
+  * title includes version number 
+Fixed
+  * some more special characters are removed from file names
+  * wrong naming for two setup pages
+  * parsing for available cd drives was a bit to stupid
