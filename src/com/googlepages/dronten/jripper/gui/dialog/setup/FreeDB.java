@@ -19,7 +19,8 @@ import java.awt.*;
  * Set cddb options (server and port and default method).
  */
 public class FreeDB extends BaseSetupPanel {
-    //private JComboBox   aDefaultMethod = null;
+	private static final long serialVersionUID = -5687003939448814870L;
+	//private JComboBox   aDefaultMethod = null;
     private JComboBox   aCDDBPServer = null;
     private JComboBox   aCDDBServer = null;
     private JTextField  aEmail = null;

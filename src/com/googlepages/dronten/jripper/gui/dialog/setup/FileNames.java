@@ -19,7 +19,8 @@ import java.awt.*;
  * Set directory and file creation options (directorytype, filenametype, prefixtype, prefixsep, useprefix).
  */
 public class FileNames extends BaseSetupPanel {
-    private JComboBox   aDirChoices = null;
+	private static final long serialVersionUID = 171144859050914373L;
+	private JComboBox   aDirChoices = null;
     private JComboBox   aFileChoices = null;
     private JTextField  aTrackSep = null;
     private JComboBox   aTrackNo = null;

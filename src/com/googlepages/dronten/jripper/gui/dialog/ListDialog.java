@@ -20,7 +20,8 @@ import java.util.Vector;
  * A list selection dialog object.
  */
 public class ListDialog extends BaseDialog implements ActionListener {
-    private JList       aList = null;
+	private static final long serialVersionUID = 3903976393522420626L;
+	private JList       aList = null;
     private JButton     aOK = null;
     private boolean     aSelect = false;
 
@@ -35,7 +36,7 @@ public class ListDialog extends BaseDialog implements ActionListener {
      * @param fixed         true for fixed font
      * @throws HeadlessException
      */
-    public ListDialog(JFrame owner, String titleText, String labelText, String okText, String cancelText, Vector choices, boolean fixed) throws HeadlessException {
+    public ListDialog(JFrame owner, String titleText, String labelText, String okText, String cancelText, Vector<?> choices, boolean fixed) throws HeadlessException {
         super(owner, titleText, true);
 
         aOK = ComponentFactory.createButton(okText, "", this, 0, 0);

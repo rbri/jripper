@@ -25,7 +25,8 @@ import java.util.regex.Pattern;
  * Set cd reader options (device, speed, paranoia).
  */
 public class CDReader extends BaseSetupPanel implements ActionListener {
-    private JComboBox   aCDDevice = null;
+	private static final long serialVersionUID = -8131730144916093598L;
+	private JComboBox   aCDDevice = null;
     private JComboBox   aCDSpeed = null;
     private JCheckBox   aCDParanoia = null;
     private JCheckBox   aCDMono = null;
@@ -96,7 +97,9 @@ public class CDReader extends BaseSetupPanel implements ActionListener {
      * Data model for combobox with cd devices.
      */
     class DeviceModel extends DefaultComboBoxModel {
-        /**
+		private static final long serialVersionUID = -3813618980385028440L;
+
+		/**
          *
          * @param ve2
          */

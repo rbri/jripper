@@ -22,10 +22,9 @@ import java.awt.event.ActionListener;
  * Set some misc. options (lookefeel, allowempty, sleep, basedir).
  */
 public class General extends BaseSetupPanel implements ActionListener {
-    private JComboBox   aSleep = null;
-    private JCheckBox   aEmptyAlbumData = null;
+	private static final long serialVersionUID = -2359626559691964307L;
+	private JCheckBox   aEmptyAlbumData = null;
     private JCheckBox   aDumpCueSheet = null;
-    private String      aCurrentLF;
     private JTextField  aBaseDirectory = null;
     private JButton     aBrowseMusicDir = null;
     private JTextField  aCodepage = null;

@@ -18,7 +18,8 @@ import javax.swing.table.AbstractTableModel;
  * AlbumModel is a table model that contains all tracks that will be ripped or encoded/decoded.
  */
 public class AlbumModel extends AbstractTableModel {
-    private Album aAlbum = null;
+	private static final long serialVersionUID = 7898511494400030799L;
+	private Album aAlbum = null;
 
 
     /**
@@ -84,7 +85,7 @@ public class AlbumModel extends AbstractTableModel {
      * @param column Column number
      * @return Class type
      */
-    @Override public Class getColumnClass(int column) {
+    @Override public Class<?> getColumnClass(int column) {
         return getValueAt(0, column).getClass();
     }
 

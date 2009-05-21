@@ -22,7 +22,8 @@ import java.awt.event.ActionListener;
  * A preference dialog.
  */
 public class SetupDialog extends BaseDialog implements ActionListener, ListSelectionListener {
-    private JPanel              aSetupPanel = null;
+	private static final long serialVersionUID = 2483587695090341337L;
+	private JPanel              aSetupPanel = null;
     private JList               aList = null;
     private BaseSetupPanel[]    aPanels = null;
     private BaseSetupPanel      aCurrentPanel = null;

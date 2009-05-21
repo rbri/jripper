@@ -22,7 +22,8 @@ import java.awt.event.ActionListener;
  * Set path to all encoder/decoder applications.
  */
 public class Program extends BaseSetupPanel implements ActionListener {
-    private JTextField aLameEncoder = null;
+	private static final long serialVersionUID = -5860710140617450387L;
+	private JTextField aLameEncoder = null;
     private JTextField aOggEncoder = null;
     private JTextField aOggDecoder = null;
     private JTextField aAACEncoder = null;

@@ -19,7 +19,8 @@ import java.awt.*;
  * Set music title tag option.
  */
 public class Tag extends BaseSetupPanel {
-    private JComboBox aTitelTagChoices = null;
+	private static final long serialVersionUID = -5748635179879855124L;
+	private JComboBox aTitelTagChoices = null;
     private JCheckBox aRemoveNonLetters = null;
 
 

@@ -22,7 +22,8 @@ import java.awt.event.ActionListener;
  * Dump to wav files and decoding has no options.
  */
 public class Encoder extends BaseSetupPanel implements ActionListener {
-    private JComboBox aDefault = null;
+	private static final long serialVersionUID = -5704040960970711994L;
+	private JComboBox aDefault = null;
     private JTextField aEncoderName[];
     private JTextField aEncoderParam[];
     private JButton aResetButton[];

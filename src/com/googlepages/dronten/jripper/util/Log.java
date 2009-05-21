@@ -185,7 +185,6 @@ public class Log {
      */
     public void print(int verbose, String message) {
         if (verbose <= aLogLevel) {
-            String s = "";
 
             GregorianCalendar cal = new GregorianCalendar();
             System.out.println(String.format("%02d:%02d:%02d %s", cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), cal.get(Calendar.SECOND), message));
