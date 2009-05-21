@@ -3,6 +3,8 @@ Version 1.0.1 (2009-05-10)
 Changed 
   * title includes version number 
 Fixed
-  * some more special characters are removed from file names
+  * some more special characters are replaces by more saver ones 
+    during the generation of the file names
   * wrong naming for two setup pages
   * parsing for available cd drives was a bit to stupid
+  * some internal warnings fixed
