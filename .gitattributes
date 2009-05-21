@@ -4,6 +4,7 @@
 .settings/org.eclipse.jdt.core.prefs -text
 /history.txt -text
 /jripper.jardesc -text
+lib/junit/junit.jar -text
 src/com/googlepages/dronten/jripper/Command.java -text
 src/com/googlepages/dronten/jripper/Constants.java -text
 src/com/googlepages/dronten/jripper/ErrorParserThread.java -text
