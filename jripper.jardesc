@@ -10,7 +10,8 @@
             <packagesToUnSeal/>
         </sealing>
     </manifest>
-    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
         <javaElement handleIdentifier="=jRipper/src"/>
+        <file path="/jRipper/history.txt"/>
     </selectedElements>
 </jardesc>
