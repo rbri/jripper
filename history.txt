@@ -1,4 +1,4 @@
-Version 1.0.1 (2009-05-10)
+Version 1.0.1 (2009-05-21)
 ==========================
 Changed 
   * title includes version number 
