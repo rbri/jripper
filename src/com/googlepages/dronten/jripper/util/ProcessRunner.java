@@ -1,5 +1,5 @@
 /*
-* Copyright 2004-2009 by dronten@gmail.com
+* Copyright 2004-2010 by dronten@gmail.com
 *
 * This source is distributed under the terms of the GNU PUBLIC LICENSE version 3
 * http://www.gnu.org/licenses/gpl.html
@@ -154,6 +154,7 @@ public class ProcessRunner extends BaseThread {
     public StreamThread getThread1() {
         return aThread1;
     }
+
 
     /**
      * Return status of exit codes.
