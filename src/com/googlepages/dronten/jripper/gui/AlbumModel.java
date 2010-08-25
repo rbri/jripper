@@ -1,5 +1,5 @@
 /*
-* Copyright 2004-2009 by dronten@gmail.com
+* Copyright 2004-2010 by dronten@gmail.com
 *
 * This source is distributed under the terms of the GNU PUBLIC LICENSE version 3
 * http://www.gnu.org/licenses/gpl.html
@@ -19,7 +19,7 @@ import javax.swing.table.AbstractTableModel;
  */
 public class AlbumModel extends AbstractTableModel {
 	private static final long serialVersionUID = 7898511494400030799L;
-	private Album aAlbum = null;
+    private Album aAlbum = null;
 
 
     /**
