@@ -1,5 +1,5 @@
 /*
-* Copyright 2004-2009 by dronten@gmail.com
+* Copyright 2004-2010 by dronten@gmail.com
 *
 * This source is distributed under the terms of the GNU PUBLIC LICENSE version 3
 * http://www.gnu.org/licenses/gpl.html
@@ -23,7 +23,7 @@ import java.awt.event.ActionListener;
  */
 public class Program extends BaseSetupPanel implements ActionListener {
 	private static final long serialVersionUID = -5860710140617450387L;
-	private JTextField aLameEncoder = null;
+    private JTextField aLameEncoder = null;
     private JTextField aOggEncoder = null;
     private JTextField aOggDecoder = null;
     private JTextField aAACEncoder = null;

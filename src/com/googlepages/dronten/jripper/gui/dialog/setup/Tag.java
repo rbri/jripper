@@ -1,5 +1,5 @@
 /*
-* Copyright 2004-2009 by dronten@gmail.com
+* Copyright 2004-2010 by dronten@gmail.com
 *
 * This source is distributed under the terms of the GNU PUBLIC LICENSE version 3
 * http://www.gnu.org/licenses/gpl.html
@@ -20,7 +20,7 @@ import java.awt.*;
  */
 public class Tag extends BaseSetupPanel {
 	private static final long serialVersionUID = -5748635179879855124L;
-	private JComboBox aTitelTagChoices = null;
+    private JComboBox aTitelTagChoices = null;
     private JCheckBox aRemoveNonLetters = null;
 
 

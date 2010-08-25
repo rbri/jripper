@@ -1,5 +1,5 @@
 /*
-* Copyright 2004-2009 by dronten@gmail.com
+* Copyright 2004-2010 by dronten@gmail.com
 *
 * This source is distributed under the terms of the GNU PUBLIC LICENSE version 3
 * http://www.gnu.org/licenses/gpl.html
@@ -23,7 +23,7 @@ import java.awt.event.ActionListener;
  */
 public class SetupDialog extends BaseDialog implements ActionListener, ListSelectionListener {
 	private static final long serialVersionUID = 2483587695090341337L;
-	private JPanel              aSetupPanel = null;
+    private JPanel              aSetupPanel = null;
     private JList               aList = null;
     private BaseSetupPanel[]    aPanels = null;
     private BaseSetupPanel      aCurrentPanel = null;
