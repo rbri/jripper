@@ -1,5 +1,5 @@
 /*
-* Copyright 2004-2009 by dronten@gmail.com
+* Copyright 2004-2010 by dronten@gmail.com
 *
 * This source is distributed under the terms of the GNU PUBLIC LICENSE version 3
 * http://www.gnu.org/licenses/gpl.html
@@ -26,7 +26,7 @@ import java.util.regex.Pattern;
  */
 public class CDReader extends BaseSetupPanel implements ActionListener {
 	private static final long serialVersionUID = -8131730144916093598L;
-	private JComboBox   aCDDevice = null;
+    private JComboBox   aCDDevice = null;
     private JComboBox   aCDSpeed = null;
     private JCheckBox   aCDParanoia = null;
     private JCheckBox   aCDMono = null;
@@ -99,7 +99,7 @@ public class CDReader extends BaseSetupPanel implements ActionListener {
     class DeviceModel extends DefaultComboBoxModel {
 		private static final long serialVersionUID = -3813618980385028440L;
 
-		/**
+        /**
          *
          * @param ve2
          */

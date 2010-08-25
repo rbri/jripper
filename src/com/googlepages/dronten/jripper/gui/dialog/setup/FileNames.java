@@ -1,5 +1,5 @@
 /*
-* Copyright 2004-2009 by dronten@gmail.com
+* Copyright 2004-2010 by dronten@gmail.com
 *
 * This source is distributed under the terms of the GNU PUBLIC LICENSE version 3
 * http://www.gnu.org/licenses/gpl.html
@@ -20,7 +20,7 @@ import java.awt.*;
  */
 public class FileNames extends BaseSetupPanel {
 	private static final long serialVersionUID = 171144859050914373L;
-	private JComboBox   aDirChoices = null;
+    private JComboBox   aDirChoices = null;
     private JComboBox   aFileChoices = null;
     private JTextField  aTrackSep = null;
     private JComboBox   aTrackNo = null;
