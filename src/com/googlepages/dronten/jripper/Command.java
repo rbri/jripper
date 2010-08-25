@@ -1,5 +1,5 @@
 /*
-* Copyright 2004-2009 by dronten@gmail.com
+* Copyright 2004-2010 by dronten@gmail.com
 *
 * This source is distributed under the terms of the GNU PUBLIC LICENSE version 3
 * http://www.gnu.org/licenses/gpl.html
@@ -34,8 +34,8 @@ public class Command {
      * @throws Exception    Throws exception if some error occured
      */
     public static void createEncoderForCD(Album album, Track track, Vector<BaseThread> threads, String outFileName, boolean wholecd) throws Exception {
-        ProcessRunner   processRunner = null;
-        StreamParserThread streamParserThread = new com.googlepages.dronten.jripper.cdda2wav.ProgressStreamParser(Command.DEBUG);
+        ProcessRunner       processRunner = null;
+        StreamParserThread  streamParserThread = new com.googlepages.dronten.jripper.cdda2wav.ProgressStreamParser(Command.DEBUG);
 
         switch (track.getEncoder()) {
             case Constants.MP3_TRACK:
@@ -69,6 +69,7 @@ public class Command {
         }
         else {
             Progress.get().appendTask(file.getName(), file.getParent());
+            processRunner.setTrackNum(track.aTrack);
         }
 
         threads.add(processRunner);
@@ -201,6 +202,7 @@ public class Command {
 
         File file = new File(outFileName);
         Progress.get().appendTask(file.getName(), file.getParent());
+        processRunner.setTrackNum(track.aTrack);
         threads.add(processRunner);
     }
 
@@ -245,6 +247,7 @@ public class Command {
 
         File file = new File(outFileName);
         Progress.get().appendTask(new File(track.aFile).length(), file.getName(), file.getParent());
+        processRunner.setTrackNum(track.aTrack);
         threads.add(processRunner);
     }
 }

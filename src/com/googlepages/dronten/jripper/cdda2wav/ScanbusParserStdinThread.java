@@ -1,5 +1,5 @@
 /*
-* Copyright 2004-2009 by dronten@gmail.com
+* Copyright 2004-2010 by dronten@gmail.com
 *
 * This source is distributed under the terms of the GNU PUBLIC LICENSE version 3
 * http://www.gnu.org/licenses/gpl.html
@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
  * Parse the content info from the cdda2aw program and set album information.
  */
 public class ScanbusParserStdinThread extends StreamThread {
-    private static final Pattern    DEVICE = Pattern.compile("\\s*(\\d,\\d,\\d)\\s+\\d?\\d?\\d\\)\\s(.*)([rR][oO][mM])(.*)");
+    private static final Pattern    DEVICE = Pattern.compile("\\s*(\\d,\\d,\\d)\\s+\\d+\\)\\s(.*)([rR][oO][mM])(.*)");
     private Vector<String>          aDevices = new Vector<String>();
 
 

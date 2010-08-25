@@ -1,5 +1,5 @@
 /*
-* Copyright 2004-2009 by dronten@gmail.com
+* Copyright 2004-2010 by dronten@gmail.com
 *
 * This source is distributed under the terms of the GNU PUBLIC LICENSE version 3
 * http://www.gnu.org/licenses/gpl.html
@@ -13,14 +13,14 @@ package com.googlepages.dronten.jripper;
  */
 public class Constants {
     public static final String          APP_NAME                        = "jRipper";
-    public static final String          APP_COPYRIGHT                   = "Copyright 2004-2009 by dronten@gmail.com";
+    public static final String          APP_COPYRIGHT                   = "Copyright 2004-2010 by dronten@gmail.com";
     public static final String          APP_HOMEPAGE                    = "http://dronten.googlepages.com/jripper";
     public static final String          APP_LICENSE                     = "This program is distributed under the terms of the GPL v3.";
-    public static final String          APP_VERSION                     = "1.0.1";
-    public static final String          APP_VERSION_FREEDB              = "jRipper+1.0";
+    public static final String          APP_VERSION                     = "1.02";
+    public static final String          APP_VERSION_FREEDB              = "jRipper+1.02";
     public static final String          CODEPAGE                        = "codepage";
 
-    public static final int             LOG_LEVEL                       = 3;
+    public static final int             LOG_LEVEL                       = 1;
     public static final boolean         DEBUG                           = false;
 
     public static final int             MP3_EXTREME_PARAM               = 0;
@@ -145,6 +145,9 @@ public class Constants {
 
     public static boolean               TITLE_REMOVEPREFIX_DEFAULT      = true;
     public static String                TITLE_REMOVEPREFIX_KEY          = "remove_prefix";
+
+    public static final String          UNSELECT_KEY                    = "unselect";
+    public static final boolean         UNSELECT_DEFAULT                = false;
 
     public enum DataFormat {
                                         WAV,

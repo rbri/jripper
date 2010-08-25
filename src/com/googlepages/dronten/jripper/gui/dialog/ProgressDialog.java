@@ -1,5 +1,5 @@
 /*
-* Copyright 2004-2009 by dronten@gmail.com
+* Copyright 2004-2010 by dronten@gmail.com
 *
 * This source is distributed under the terms of the GNU PUBLIC LICENSE version 3
 * http://www.gnu.org/licenses/gpl.html
@@ -8,6 +8,8 @@
 package com.googlepages.dronten.jripper.gui.dialog;
 
 import com.googlepages.dronten.jripper.JRipper;
+import com.googlepages.dronten.jripper.Constants;
+import com.googlepages.dronten.jripper.music.Album;
 import com.googlepages.dronten.jripper.gui.ComponentFactory;
 import com.googlepages.dronten.jripper.util.BaseThread;
 import com.googlepages.dronten.jripper.util.Progress;
@@ -31,8 +33,8 @@ public class ProgressDialog extends BaseDialog implements ActionListener {
      * And also update the dialoger progress component.
      */
     final class ThreadTask extends TimerTask {
-        private final Vector<BaseThread> aThreads;
-        private StopWatch aWatch = new StopWatch();
+        private final Vector<BaseThread>    aThreads;
+        private final StopWatch             aWatch = new StopWatch();
 
 
         /**
@@ -69,6 +71,8 @@ public class ProgressDialog extends BaseDialog implements ActionListener {
          */
         public void run() {
             synchronized (aThreads) {
+                int remove = 0;
+
                 if (aThreads.get(0).isAlive() == false) {
                     if (aThreads.get(0).hasFailed()) {
                         aHasFailed = true;
@@ -77,11 +81,13 @@ public class ProgressDialog extends BaseDialog implements ActionListener {
                         aWatch.stop();
                     }
                     else if (aThreads.size() > 1) {
+                        remove = ((BaseThread)aThreads.get(0)).getTrackNum();
                         aThreads.remove(0);
                         Progress.get().nextWorkTask();
                         aThreads.get(0).start();
                     }
                     else {
+                        remove = ((BaseThread)aThreads.get(0)).getTrackNum();
                         cancel();
                         cancelTask();
                         aWatch.stop();
@@ -97,6 +103,12 @@ public class ProgressDialog extends BaseDialog implements ActionListener {
                         setMajorProgress(Progress.get().getMajorProgress(), Progress.get().getMajorMessage());
                     }
                     setTotalProgress(Progress.get().getMajorProgress());
+                }
+
+                if (remove > 0 && Pref.get().getBoolean(Constants.UNSELECT_KEY, Constants.UNSELECT_DEFAULT)) {
+                    Album album = JRipper.get().getWin().getAlbum();
+                    album.aTracks.get(remove - 1).aSelected = false;
+                    JRipper.get().getWin().getTrackPanel().fire();
                 }
             }
         }
@@ -178,6 +190,7 @@ public class ProgressDialog extends BaseDialog implements ActionListener {
     public void cancelTask() {
         if (aTask != null) {
             aTask.cancel();
+
             for (BaseThread thread : aTask.aThreads) {
                 thread.close();
             }

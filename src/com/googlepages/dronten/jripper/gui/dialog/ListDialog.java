@@ -1,5 +1,5 @@
 /*
-* Copyright 2004-2009 by dronten@gmail.com
+* Copyright 2004-2010 by dronten@gmail.com
 *
 * This source is distributed under the terms of the GNU PUBLIC LICENSE version 3
 * http://www.gnu.org/licenses/gpl.html
@@ -21,7 +21,7 @@ import java.util.Vector;
  */
 public class ListDialog extends BaseDialog implements ActionListener {
 	private static final long serialVersionUID = 3903976393522420626L;
-	private JList       aList = null;
+    private JList       aList = null;
     private JButton     aOK = null;
     private boolean     aSelect = false;
 
