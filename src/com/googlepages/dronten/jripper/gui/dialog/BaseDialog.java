@@ -18,7 +18,10 @@ import java.awt.*;
  * Implements common routines.
  */
 public abstract class BaseDialog extends JDialog {
-    /**
+    private static final long serialVersionUID = 3521646911442974462L;
+
+
+	/**
      * Create dialog.
      *
      * @param owner - Set to null to create a window that can hide below application.

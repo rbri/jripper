@@ -14,6 +14,8 @@ import javax.swing.*;
  * Set preference.
  */
 public abstract class BaseSetupPanel extends JPanel {
+    private static final long serialVersionUID = -8338336986892743472L;
+
     public boolean aScroll = false;
 
 
