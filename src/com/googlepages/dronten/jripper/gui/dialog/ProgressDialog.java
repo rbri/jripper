@@ -12,6 +12,7 @@ import com.googlepages.dronten.jripper.Constants;
 import com.googlepages.dronten.jripper.music.Album;
 import com.googlepages.dronten.jripper.gui.ComponentFactory;
 import com.googlepages.dronten.jripper.util.BaseThread;
+import com.googlepages.dronten.jripper.util.Pref;
 import com.googlepages.dronten.jripper.util.Progress;
 import com.googlepages.dronten.jripper.util.StopWatch;
 

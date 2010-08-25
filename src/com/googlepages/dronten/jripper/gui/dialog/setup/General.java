@@ -26,7 +26,6 @@ public class General extends BaseSetupPanel implements ActionListener {
     private JCheckBox   aEmptyAlbumData = null;
     private JCheckBox   aDumpCueSheet = null;
     private JCheckBox   aUnselectTrack = null;
-    private String      aCurrentLF;
     private JTextField  aBaseDirectory = null;
     private JButton     aBrowseMusicDir = null;
     private JTextField  aCodepage = null;
