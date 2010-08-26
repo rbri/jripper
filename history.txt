@@ -1,9 +1,16 @@
+Version 1.02.1 (2010-08-26)
+==========================
+Changed 
+  * merged with jRipper 1.02 
+Fixed
+  * more warnings fixed
+
 Version 1.0.1 (2009-05-21)
 ==========================
 Changed 
   * title includes version number 
 Fixed
-  * some more special characters are replaces by more saver ones 
+  * some more special characters are replaces by more safer ones 
     during the generation of the file names
   * wrong naming for two setup pages
   * parsing for available cd drives was a bit to stupid
