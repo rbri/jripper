@@ -5,6 +5,10 @@
 /history.txt -text
 /jripper.jardesc -text
 lib/junit/junit.jar -text
+os2/helper/de/rbri/jdk14/ComponentUtil.class -text
+os2/helper/de/rbri/jdk14/JComponentUtil.class -text
+os2/helper/de/rbri/jdk14/LookAndFeelTester.class -text
+os2/jRipper/jRipper.ico -text
 src/com/googlepages/dronten/jripper/Command.java -text
 src/com/googlepages/dronten/jripper/Constants.java -text
 src/com/googlepages/dronten/jripper/ErrorParserThread.java -text
