@@ -1,4 +1,4 @@
-@ECHO OF
+@ECHO OFF
 REM ----------------
 REM jRipper
 REM
