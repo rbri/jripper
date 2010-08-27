@@ -19,14 +19,19 @@ import java.util.GregorianCalendar;
  * A log object.
  */
 public class Log {
+	public static interface LogListener {
+		public void changed(Log aLog);
+	}
+	
     private static Log              LOG = null;
     private final ArrayList<String> aLog = new ArrayList<String>();
     private int                     aLogLevel = 0;
     private int                     aMaxSize = 0;
     private BufferedOutputStream    aOutputStream = null;
+    private LogListener				aLogListener;
 
 
-    /**
+	/**
      * Create log object.
      *
      * @param maxSize   Max number of strings to store
@@ -88,6 +93,9 @@ public class Log {
                     aLog.remove(0);
                 }
             }
+            if (null != aLogListener) {
+            	aLogListener.changed(this);
+            }
         }
     }
 
@@ -119,6 +127,9 @@ public class Log {
      */
     public void clear() {
         aLog.clear();
+        if (null != aLogListener) {
+        	aLogListener.changed(this);
+        }
     }
 
 
@@ -220,4 +231,7 @@ public class Log {
     }
 
 
+	public void setLogListener(LogListener logListener) {
+		aLogListener = logListener;
+	}
 }

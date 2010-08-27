@@ -41,6 +41,7 @@ public class JRipper extends JFrame {
 
         setTitle(null);
         Log.get().setLogLevel(Constants.LOG_LEVEL);
+        Log.get().addTime(0, Constants.APP_NAME + " " + Constants.APP_VERSION);
         new Pref(Constants.APP_NAME);
         aMainWindow = new MainWindow();
         aThreads.start();
@@ -261,31 +262,38 @@ public class JRipper extends JFrame {
     public static void main(String[] args) {
         boolean failed = true;
 
+        Log.get().setLogLevel(Constants.LOG_LEVEL);
         if (args.length > 0) {
             try {
+                Log.get().addTime(1, "Set L&F: '" + args[0] + "'");
                 UIManager.setLookAndFeel(args[0]);
                 failed = false;
             }
             catch (Exception e) {
+                Log.get().addTime(1, "Set L&F failed: '" + e.getMessage() + "'");
                 if (Constants.DEBUG) e.printStackTrace();
             }
         }
 
         if (failed) {
             try {
+                Log.get().addTime(1, "Set L&F: 'com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel'");
                 UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
                 failed = false;
             }
             catch (Exception e) {
+                Log.get().addTime(1, "Set L&F failed: '" + e.getMessage() + "'");
                 if (Constants.DEBUG) e.printStackTrace();
             }
         }
 
         if (failed) {
             try {
+                Log.get().addTime(1, "Set L&F: '" + UIManager.getSystemLookAndFeelClassName() + "'");
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             }
             catch (Exception e) {
+                Log.get().addTime(1, "Set L&F failed: '" + e.getMessage() + "'");
                 if (Constants.DEBUG) e.printStackTrace();
             }
         }

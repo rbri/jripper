@@ -138,6 +138,7 @@ public class MenuPanel extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         if (actionEvent.getSource() == aViewLog) {
             HelpDialog help = new HelpDialog(JRipper.get(), "jRipper Log", "&Close");
+            Log.get().setLogListener(help);
 
             help.centerOnApplication();
             help.setVisible(true);

@@ -7,19 +7,29 @@
 
 package com.googlepages.dronten.jripper.gui.dialog;
 
-import com.googlepages.dronten.jripper.gui.ComponentFactory;
-
-import javax.swing.*;
-import javax.swing.text.html.HTMLEditorKit;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JEditorPane;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.text.html.HTMLEditorKit;
+
+import com.googlepages.dronten.jripper.gui.ComponentFactory;
+import com.googlepages.dronten.jripper.util.Log;
+import com.googlepages.dronten.jripper.util.Log.LogListener;
 
 
 /**
  * A help dialog object.
  */
-public class HelpDialog extends BaseDialog implements ActionListener {
+public class HelpDialog extends BaseDialog implements ActionListener, LogListener {
     private static final long serialVersionUID = 666L;
     private JEditorPane aEditor = null;
 
@@ -58,6 +68,7 @@ public class HelpDialog extends BaseDialog implements ActionListener {
      */
     public void actionPerformed(ActionEvent e) {
         setVisible(false);
+        Log.get().setLogListener(null);
     }
 
 
@@ -81,4 +92,9 @@ public class HelpDialog extends BaseDialog implements ActionListener {
     public void setText(String text) {
         aEditor.setText(text);
     }
+
+
+	public void changed(Log aLog) {
+		setText(aLog.getLogMessage());
+	}
 }
