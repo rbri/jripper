@@ -40,7 +40,7 @@ public abstract class BaseDialog extends JDialog {
             }
         });
 
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
     }
 
 

@@ -176,51 +176,49 @@ public class ProcessRunner extends BaseThread {
         if (thread == null) {
             return;
         }
-        else {
-            addLog(2, "ProcessRunner::setStreams()  thread.type=" + thread.getType() + "  thread.write=" + thread.isWriting() + "  aReadProcess=" + aReadProcess + "  aReadFileName=" + aReadFileName);
+        addLog(2, "ProcessRunner::setStreams()  thread.type=" + thread.getType() + "  thread.write=" + thread.isWriting() + "  aReadProcess=" + aReadProcess + "  aReadFileName=" + aReadFileName);
 
-            if (aReadProcess != null) {
-                if (thread.getType() == StreamThread.ReadType.READ_STDIN_BYTES) {
-                    thread.setByteReader(new BufferedInputStream(aReadProcess.getInputStream()));
-                }
-                else if (thread.getType() == StreamThread.ReadType.READ_STDERR_BYTES) {
-                    thread.setByteReader(new BufferedInputStream(aReadProcess.getErrorStream()));
-                }
-                else if (thread.getType() == StreamThread.ReadType.READ_STDIN_LINES) {
-                    thread.setLineReader(new BufferedReader(new InputStreamReader(aReadProcess.getInputStream())));
-                }
-                else if (thread.getType() == StreamThread.ReadType.READ_STDERR_LINES) {
-                    thread.setLineReader(new BufferedReader(new InputStreamReader(aReadProcess.getErrorStream())));
-                }
-                else {
-                    assert false;
-                }
+        if (aReadProcess != null) {
+            if (thread.getType() == StreamThread.ReadType.READ_STDIN_BYTES) {
+                thread.setByteReader(new BufferedInputStream(aReadProcess.getInputStream()));
             }
-            else if (aReadFileName != null) {
-                if (thread.getType() == StreamThread.ReadType.READ_FILE_BYTES) {
-                    thread.setByteReader(new BufferedInputStream(new FileInputStream(aReadFileName)));
-                }
-                else if (thread.getType() == StreamThread.ReadType.READ_FILE_LINES) {
-                    thread.setLineReader(new BufferedReader(new InputStreamReader(new FileInputStream(aReadFileName))));
-                }
-                else {
-                    assert false;
-                }
+            else if (thread.getType() == StreamThread.ReadType.READ_STDERR_BYTES) {
+                thread.setByteReader(new BufferedInputStream(aReadProcess.getErrorStream()));
+            }
+            else if (thread.getType() == StreamThread.ReadType.READ_STDIN_LINES) {
+                thread.setLineReader(new BufferedReader(new InputStreamReader(aReadProcess.getInputStream())));
+            }
+            else if (thread.getType() == StreamThread.ReadType.READ_STDERR_LINES) {
+                thread.setLineReader(new BufferedReader(new InputStreamReader(aReadProcess.getErrorStream())));
             }
             else {
                 assert false;
             }
+        }
+        else if (aReadFileName != null) {
+            if (thread.getType() == StreamThread.ReadType.READ_FILE_BYTES) {
+                thread.setByteReader(new BufferedInputStream(new FileInputStream(aReadFileName)));
+            }
+            else if (thread.getType() == StreamThread.ReadType.READ_FILE_LINES) {
+                thread.setLineReader(new BufferedReader(new InputStreamReader(new FileInputStream(aReadFileName))));
+            }
+            else {
+                assert false;
+            }
+        }
+        else {
+            assert false;
+        }
 
-            if (thread.isWriting()) {
-                if (aWriteProcess != null) {
-                    thread.setByteWriter(new BufferedOutputStream(aWriteProcess.getOutputStream()));
-                }
-                else if (aWriteFileName != null) {
-                    thread.setByteWriter(new BufferedOutputStream(new FileOutputStream(aWriteFileName)));
-                }
-                else {
-                    assert false;
-                }
+        if (thread.isWriting()) {
+            if (aWriteProcess != null) {
+                thread.setByteWriter(new BufferedOutputStream(aWriteProcess.getOutputStream()));
+            }
+            else if (aWriteFileName != null) {
+                thread.setByteWriter(new BufferedOutputStream(new FileOutputStream(aWriteFileName)));
+            }
+            else {
+                assert false;
             }
         }
     }

@@ -150,9 +150,7 @@ public class Progress {
         if (aTotalValue > 0) {
             return (int) (((aMinorValue + aTotalRunningValue) / aTotalValue) * 100d);
         }
-        else {
-            return aMinorValue;
-        }
+        return aMinorValue;
     }
 
 

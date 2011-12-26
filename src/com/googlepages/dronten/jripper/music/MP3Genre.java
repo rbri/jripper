@@ -233,29 +233,25 @@ public class MP3Genre {
         if (num != DEFAULT_NUM) {
             return aNumberToName.get(num); // Input genre string is ok, return it
         }
-        else {
-            // Try to grab all numbers in string
-            String nums = "";
-            for (int f = 0; f < genre.length(); f++) {
-                char c = genre.charAt(f);
-                if (c >= '0' && c <= '9') {
-                    nums += c;
-                }
-            }
-            try {
-                num = Integer.parseInt(nums);
-            }
-            catch (NumberFormatException e1) {
-                return DEFAULT_STRING;
-            }
-
-            if (num >= 0 && num < aNumberToName.size()) {
-                return aNumberToName.get(num);
-            }
-            else {
-                return DEFAULT_STRING;
+        // Try to grab all numbers in string
+        String nums = "";
+        for (int f = 0; f < genre.length(); f++) {
+            char c = genre.charAt(f);
+            if (c >= '0' && c <= '9') {
+                nums += c;
             }
         }
+        try {
+            num = Integer.parseInt(nums);
+        }
+        catch (NumberFormatException e1) {
+            return DEFAULT_STRING;
+        }
+
+        if (num >= 0 && num < aNumberToName.size()) {
+            return aNumberToName.get(num);
+        }
+        return DEFAULT_STRING;
     }
 
 
@@ -269,9 +265,7 @@ public class MP3Genre {
         if (num >= 0 && num < aNumberToName.size()) {
             return aNumberToName.get(num);
         }
-        else {
-            return DEFAULT_STRING;
-        }
+        return DEFAULT_STRING;
     }
 
 
@@ -294,9 +288,7 @@ public class MP3Genre {
         if (num >= 0 && num < aNumberToName.size()) {
             return aNumberToName.get(num);
         }
-        else {
-            return DEFAULT_STRING;
-        }
+        return DEFAULT_STRING;
     }
 
 
@@ -311,8 +303,6 @@ public class MP3Genre {
         if (i != null) {
             return i.intValue();
         }
-        else {
-            return DEFAULT_NUM;
-        }
+        return DEFAULT_NUM;
     }
 }

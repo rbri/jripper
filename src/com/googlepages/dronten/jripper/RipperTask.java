@@ -69,26 +69,25 @@ public class RipperTask {
                     if (track.getDecoder() != Constants.CD_TRACK && track.aFile.equalsIgnoreCase(fileName)) {
                         throw new Exception("The encoded file will have the same filename as the decoded.\nThat will not do!\nChange encoder type, titlename or artist/album.\n" + track.aFile);
                     }
-                    else {
-                        switch (track.getDecoder()) {
-                            case Constants.CD_TRACK:
-                                Command.createEncoderForCD(aAlbum, track, threads, fileName, false);
-                                break;
 
-                            case Constants.MP3_TRACK:
-                            case Constants.OGG_TRACK:
-                            case Constants.M4A_TRACK:
-                            case Constants.FLAC_TRACK:
-                                Command.createEncoderForFiles(aAlbum, track, threads, fileName);
-                                break;
+                    switch (track.getDecoder()) {
+                        case Constants.CD_TRACK:
+                            Command.createEncoderForCD(aAlbum, track, threads, fileName, false);
+                            break;
 
-                            case Constants.WAV_TRACK:
-                                Command.createEncoderForWavFiles(aAlbum, track, threads, fileName);
-                                break;
+                        case Constants.MP3_TRACK:
+                        case Constants.OGG_TRACK:
+                        case Constants.M4A_TRACK:
+                        case Constants.FLAC_TRACK:
+                            Command.createEncoderForFiles(aAlbum, track, threads, fileName);
+                            break;
 
-                            default:
-                                throw new Exception("Select another encoding type for selected source.\nYou can't convert from one format to the SAME format!");
-                        }
+                        case Constants.WAV_TRACK:
+                            Command.createEncoderForWavFiles(aAlbum, track, threads, fileName);
+                            break;
+
+                        default:
+                            throw new Exception("Select another encoding type for selected source.\nYou can't convert from one format to the SAME format!");
                     }
                 }
             }

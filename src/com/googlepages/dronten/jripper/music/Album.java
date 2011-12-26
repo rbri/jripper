@@ -139,9 +139,7 @@ public class Album {
             if (track.equals(track2)) {
                 break;
             }
-            else {
-                count++;
-            }
+            count++;
         }
         return count;
     }

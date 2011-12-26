@@ -73,9 +73,7 @@ public class AlbumModel extends AbstractTableModel {
         if (aAlbum != null) {
             return aAlbum.aTracks.size();
         }
-        else {
-            return 0;
-        }
+        return 0;
     }
 
 

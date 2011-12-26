@@ -82,13 +82,13 @@ public class ProgressDialog extends BaseDialog implements ActionListener {
                         aWatch.stop();
                     }
                     else if (aThreads.size() > 1) {
-                        remove = ((BaseThread)aThreads.get(0)).getTrackNum();
+                        remove = aThreads.get(0).getTrackNum();
                         aThreads.remove(0);
                         Progress.get().nextWorkTask();
                         aThreads.get(0).start();
                     }
                     else {
-                        remove = ((BaseThread)aThreads.get(0)).getTrackNum();
+                        remove = aThreads.get(0).getTrackNum();
                         cancel();
                         cancelTask();
                         aWatch.stop();

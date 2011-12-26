@@ -50,9 +50,7 @@ public class ContentsParserThread extends StreamThread {
             addLog(1, "Can't read disc CDDBI number!");
             return true;
         }
-        else {
-            return super.hasFailed();
-        }
+        return super.hasFailed();
     }
 
 
@@ -115,8 +113,6 @@ public class ContentsParserThread extends StreamThread {
         if (aAlbum != null) {
             return "ContentsParserThread.toString() " + aAlbum.toString();
         }
-        else {
-            return "ContentsParserThread.toString() ";
-        }
+        return "ContentsParserThread.toString() ";
     }
 }

@@ -83,7 +83,7 @@ public class ComponentFactory {
         if (tip.length() > 0) {
             tmp.setToolTipText(tip);
         }
-        tmp.setHorizontalAlignment(JCheckBox.LEFT);
+        tmp.setHorizontalAlignment(SwingConstants.LEFT);
         tmp.setAlignmentX(Component.LEFT_ALIGNMENT);
         if (width > 0) {
             tmp.setPreferredSize(new Dimension(width, (int) tmp.getPreferredSize().getHeight()));
