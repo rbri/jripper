@@ -125,7 +125,7 @@ public class StatusBar extends JPanel {
          *
          */
         @Override public void run() {
-            synchronized (aFlashRun) {
+            synchronized (StatusBar.this) {
                 if (aFlashRun) {
                     return;
                 }
@@ -157,7 +157,7 @@ public class StatusBar extends JPanel {
                 }
             }
 
-            synchronized (aFlashRun) {
+            synchronized (StatusBar.this) {
                 aFlashRun = false;
             }
         }
