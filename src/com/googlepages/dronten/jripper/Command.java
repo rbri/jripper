@@ -176,23 +176,51 @@ public class Command {
 
             switch (track.getEncoder()) {
                 case Constants.MP3_TRACK:
-                    processRunner = new ProcessRunnerReadProcWriteProc(Log.get(), null, decoderParam, com.googlepages.dronten.jripper.lame.Command.getEncoder(album, track, outFileName, false, Constants.DataFormat.WAV), byteReaderThread, streamParserThread);
+                    processRunner = new ProcessRunnerReadProcWriteProc(
+                            Log.get(),
+                            null,
+                            decoderParam,
+                            com.googlepages.dronten.jripper.lame.Command.getEncoder(album, track, outFileName, false, Constants.DataFormat.WAV),
+                            byteReaderThread,
+                            streamParserThread);
                     break;
 
                 case Constants.OGG_TRACK:
-                    processRunner = new ProcessRunnerReadProcWriteProc(Log.get(), null, decoderParam, com.googlepages.dronten.jripper.ogg.Command.getEncoder(album, track, outFileName, false, Constants.DataFormat.WAV), byteReaderThread, streamParserThread);
+                    processRunner = new ProcessRunnerReadProcWriteProc(
+                            Log.get(),
+                            null,
+                            decoderParam,
+                            com.googlepages.dronten.jripper.ogg.Command.getEncoder(album, track, outFileName, false, Constants.DataFormat.WAV),
+                            byteReaderThread,
+                            streamParserThread);
                     break;
 
                 case Constants.M4A_TRACK:
-                    processRunner = new ProcessRunnerReadProcWriteProc(Log.get(), null, decoderParam, com.googlepages.dronten.jripper.aac.Command.getEncoder(album, track, outFileName, false), byteReaderThread, streamParserThread);
+                    processRunner = new ProcessRunnerReadProcWriteProc(
+                            Log.get(),
+                            null,
+                            decoderParam,
+                            com.googlepages.dronten.jripper.aac.Command.getEncoder(album, track, outFileName, false),
+                            byteReaderThread,
+                            streamParserThread);
                     break;
 
                 case Constants.FLAC_TRACK:
-                    processRunner = new ProcessRunnerReadProcWriteProc(Log.get(), null, decoderParam, com.googlepages.dronten.jripper.flac.Command.getEncoder(album, track, outFileName, false), byteReaderThread, streamParserThread);
+                    processRunner = new ProcessRunnerReadProcWriteProc(
+                            Log.get(),
+                            null,
+                            decoderParam,
+                            com.googlepages.dronten.jripper.flac.Command.getEncoder(album, track, outFileName, false),
+                            byteReaderThread,
+                            streamParserThread);
                     break;
 
                 case Constants.WAV_TRACK:
-                    processRunner = new ProcessRunnerReadProc(Log.get(), null, decoderParamWav, streamParserThread);
+                    processRunner = new ProcessRunnerReadProc(
+                            Log.get(),
+                            null,
+                            decoderParamWav,
+                            streamParserThread);
                     break;
 
                 default:
