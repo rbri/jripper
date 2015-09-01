@@ -61,7 +61,6 @@ src/com/googlepages/dronten/jripper/ogg/Command.java -text
 src/com/googlepages/dronten/jripper/ogg/ProgressStreamParser.java -text
 src/com/googlepages/dronten/jripper/resource/jRipper.icon.png -text
 src/com/googlepages/dronten/jripper/util/BaseThread.java -text
-src/com/googlepages/dronten/jripper/util/DummyParserThread.java -text
 src/com/googlepages/dronten/jripper/util/Log.java -text
 src/com/googlepages/dronten/jripper/util/Pref.java -text
 src/com/googlepages/dronten/jripper/util/ProcessParam.java -text
